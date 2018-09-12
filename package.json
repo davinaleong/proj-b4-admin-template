@@ -1,0 +1,35 @@
+{
+  "name": "proj-b4-admintemplate",
+  "version": "1.0.0",
+  "description": "Simple Bootstrap 4 Admin Template",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavinaLeong/proj-b4-admintemplate.git"
+  },
+  "keywords": [
+    "bootstrap4",
+    "admin",
+    "template",
+    "css",
+    "html",
+    "javascript",
+    "fontawesome",
+    "fa",
+    "font",
+    "awesome",
+    "davina",
+    "leong",
+    "gulp",
+    "npm"
+  ],
+  "author": "Davina Leong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavinaLeong/proj-b4-admintemplate/issues"
+  },
+  "homepage": "https://github.com/DavinaLeong/proj-b4-admintemplate#readme"
+}
