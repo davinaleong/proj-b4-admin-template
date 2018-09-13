@@ -10,12 +10,18 @@ npm start
 
 And navigate to `http://localhost:3000/index.html` in your web browser.
 
+To update the vendor packages, run this command in your terminal/console:
+```
+gulp
+```
+
 ## Dependencies
 *Note: these dependencies are only necessary when displaying this project's pages.*
 1. Express
 2. Nodemon
 
 ## Included packages
+*Refer to the packages' respective documentations on how to use them*
 1. Bootstrap 4
 2. Font Awesome 5 Free
 3. jQuery 3
