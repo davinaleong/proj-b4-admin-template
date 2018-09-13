@@ -57,6 +57,11 @@ gulp.task(tasks.copy, () => {
         //jQuery
         gulp.src(`${paths.nodeModules}/jquery/dist/**.*`)
             .pipe(debug({ title: "--- copied jQuery scripts" }))
+            .pipe(gulp.dest(paths.dist.vendor.js)),
+
+        //Parsley
+        gulp.src(`${paths.nodeModules}/parsleyjs/dist/**.*`)
+            .pipe(debug({ title: "--- copied ParsleyJS scripts" }))
             .pipe(gulp.dest(paths.dist.vendor.js))
     ]);
 });
