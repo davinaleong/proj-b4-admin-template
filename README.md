@@ -18,4 +18,5 @@ And navigate to `http://localhost:3000/index.html` in your web browser.
 ## Included packages
 1. Bootstrap 4
 2. Font Awesome 5 Free
-3. jQuery
+3. jQuery 3
+4. ParsleyJS 2
