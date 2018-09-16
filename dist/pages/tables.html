@@ -39,7 +39,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Your Name
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./my-profile.html"><i class="fas fa-eye fa-fw"></i> My Profile</a>
                         <a class="dropdown-item" href="./change-password.html"><i class="fas fa-key fa-fw"></i> Change Password</a>
                         <div class="dropdown-divider"></div>
@@ -57,30 +57,103 @@
                     <a class="nav-link" href="./../index.html"><i class="fas fa-home fa-fw"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="./sign-in.html"><i class="fas fa-sign-in-alt fa-fw"></i> Sign-in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./static-content.html"><i class="fas fa-file fa-fw"></i> Static Content</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./tables.html"><i class="fas fa-table fa-fw"></i> Tables</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./form.html"><i class="fas fa-file-alt fa-fw"></i> Form</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./logs.html"><i class="fas fa-list fa-fw"></i> Logs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./license.html"><i class="fas fa-copyright fa-fw"></i> License</a>
-                    </li>
+                    <a class="nav-link" href="./static-content.html"><i class="fas fa-file fa-fw"></i> Static Content</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./tables.html"><i class="fas fa-table fa-fw"></i> Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./form.html"><i class="fas fa-file-alt fa-fw"></i> Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./logs.html"><i class="fas fa-list fa-fw"></i> Logs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./license.html"><i class="fas fa-copyright fa-fw"></i> License</a>
+                </li>
             </ul>
         </div>
         <div id="main" class="col-9">
-            <h1>Tables</h1>
-            <hr>
+            <h1 class="display-4">Tables</h1>
+            <hr class="mb-3">
+
+            <h4>Notes <small>- regular table</small></h4>
+            <div class="table-responsive mb-3">
+                <table id="table-notes" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Note Title</th>
+                            <th>Note Content</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>ratione et rerum hic minus</td>
+                            <td>Voluptatum distinctio magni et dicta velit. Dicta sint ut consectetur est nulla. Tempore accusamus sed saepe culpa labore et tenetur quibusdam optio.</td>
+                            <td data-sort="2018-03-08, 07:41:26">08 Mar 2018, 07:41:26</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>sit ut corrupti expedita harum</td>
+                            <td>Quo et sunt quia totam aut necessitatibus eligendi. Et quo facere quaerat qui eos. Aut et sed.</td>
+                            <td data-sort="2018-07-26, 03:02:17">26 Jul 2018, 03:02:17</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>et consequatur consequatur quia et</td>
+                            <td>Dolorem deleniti est est reiciendis. Voluptate pariatur omnis consequatur cumque minima rerum possimus vel. Qui aperiam reprehenderit.</td>
+                            <td data-sort="2018-08-23, 00:36:09">23 Aug 2018, 00:36:09</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>ut corrupti nam odit est</td>
+                            <td>Officia illo qui totam. Qui dolorum voluptatem ut omnis suscipit dicta autem hic. Necessitatibus accusamus itaque quam repellendus totam et.</td>
+                            <td data-sort="2018-02-02, 18:24:07">02 Feb 2018, 18:24:07</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>sit quod ut vero quia</td>
+                            <td>Dolorem laboriosam asperiores facilis. Rerum libero blanditiis. Nulla error est sed error est sed est deleniti voluptates.</td>
+                            <td data-sort="2018-03-07, 08:28:32">07 Mar 2018, 08:28:32</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>molestiae in non quibusdam exercitationem</td>
+                            <td>Alias beatae qui fugit corrupti nemo suscipit atque. Dolorem reprehenderit repellendus. Eius eos ea culpa voluptate qui eum.</td>
+                            <td data-sort="2018-01-27, 01:10:41">27 Jan 2018, 01:10:41</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>harum fugit expedita ab magni</td>
+                            <td>Necessitatibus saepe aut omnis tempora omnis et. Maxime voluptatem sunt rem fugit sed et ea. Provident quos blanditiis ut ipsum fuga animi.</td>
+                            <td data-sort="2018-01-13, 06:46:46">13 Jan 2018, 06:46:46</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>optio deleniti nulla laudantium ipsum</td>
+                            <td>Ad omnis est. Sed reiciendis ipsam modi et ad. Ab et facere.</td>
+                            <td data-sort="2018-05-30, 21:00:51">30 May 2018, 21:00:51</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>dolor temporibus hic perspiciatis officiis</td>
+                            <td>Voluptatem quo soluta omnis et quae iure itaque omnis. Fuga consequatur odio. Tempore maiores aut incidunt numquam non.</td>
+                            <td data-sort="2018-02-11, 05:19:15">11 Feb 2018, 05:19:15</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>rem libero sapiente nostrum et</td>
+                            <td>Dignissimos saepe aspernatur id adipisci velit omnis fugit minima. Numquam enim corrupti debitis distinctio sint ullam. Nam tempora hic voluptatem tempore.</td>
+                            <td data-sort="2018-04-30, 17:51:13">30 Apr 2018, 17:51:13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
-            <h2>Users</h2>
+            <h4>List of Profiles <small>- DataTables</small></h4>
             <table id="table-users" class="table table-bordered">
                 <thead>
                     <tr>
