@@ -23,7 +23,8 @@ gulp
 
 ## Included packages
 *Refer to the packages' respective documentations on how to use them*
-1. Bootstrap 4
-2. Font Awesome 5 Free
-3. jQuery 3
-4. ParsleyJS 2
+1. [Bootstrap 4](https://getbootstrap.com/)
+2. [Font Awesome 5 Free](https://fontawesome.com/)
+3. [jQuery 3](http://jquery.com/)
+4. [ParsleyJS 2](http://parsleyjs.org/)
+5. [DataTables](https://datatables.net/)
