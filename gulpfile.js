@@ -62,6 +62,20 @@ gulp.task(tasks.copy, () => {
         //Parsley
         gulp.src(`${paths.nodeModules}/parsleyjs/dist/**.*`)
             .pipe(debug({ title: "--- copied ParsleyJS scripts" }))
+            .pipe(gulp.dest(paths.dist.vendor.js)),
+
+        //DataTables
+        gulp.src(`${paths.nodeModules}/dataTables.net-bs4/css/**.*`)
+            .pipe(debug({ title: "--- copied DataTables BS4 styles" }))
+            .pipe(gulp.dest(paths.dist.vendor.css)),
+        gulp.src(`${paths.nodeModules}/dataTables.net-bs4/js/**.*`)
+            .pipe(debug({ title: "--- copied DataTables BS4 scripts" }))
+            .pipe(gulp.dest(paths.dist.vendor.js)),
+        gulp.src(`${paths.nodeModules}/dataTables.net-responsive-bs4/css/**.*`)
+            .pipe(debug({ title: "--- copied DataTables responsive BS4 styles" }))
+            .pipe(gulp.dest(paths.dist.vendor.css)),
+        gulp.src(`${paths.nodeModules}/dataTables.net-responsive-bs4/js/**.*`)
+            .pipe(debug({ title: "--- copied DataTables responsive BS4 scripts" }))
             .pipe(gulp.dest(paths.dist.vendor.js))
     ]);
 });
