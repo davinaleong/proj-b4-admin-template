@@ -65,6 +65,12 @@ gulp.task(tasks.copy, () => {
             .pipe(gulp.dest(paths.dist.vendor.js)),
 
         //DataTables
+        gulp.src(`${paths.nodeModules}/dataTables.net/js/**.*`)
+            .pipe(debug({ title: "--- copied DataTables scripts" }))
+            .pipe(gulp.dest(paths.dist.vendor.js)),
+        gulp.src(`${paths.nodeModules}/dataTables.net-responsive/js/**.*`)
+            .pipe(debug({ title: "--- copied DataTables responsive scripts" }))
+            .pipe(gulp.dest(paths.dist.vendor.js)),
         gulp.src(`${paths.nodeModules}/dataTables.net-bs4/css/**.*`)
             .pipe(debug({ title: "--- copied DataTables BS4 styles" }))
             .pipe(gulp.dest(paths.dist.vendor.css)),
