@@ -82,6 +82,10 @@ gulp.task(tasks.copy, () => {
             .pipe(gulp.dest(paths.dist.vendor.css)),
         gulp.src(`${paths.nodeModules}/dataTables.net-responsive-bs4/js/**.*`)
             .pipe(debug({ title: "--- copied DataTables responsive BS4 scripts" }))
+            .pipe(gulp.dest(paths.dist.vendor.js)),
+
+        gulp.src(`${paths.nodeModules}/moment/min/**.*`)
+            .pipe(debug({ title: "--- copied Moment scripts" }))
             .pipe(gulp.dest(paths.dist.vendor.js))
     ]);
 });

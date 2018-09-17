@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- META end -->
 
-    <!-- EXTERNAL STYLES start -->
+    <!-- EXTERNAL STYLES/SCRIPTS start -->
     <link rel="stylesheet" href="./../vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/parsley-b4.css">
-    <!-- EXTERNAL STYLES end -->
+
+    <script src="./../vendor/js/jquery.min.js"></script>
+    <script src="./../vendor/js/bootstrap.bundle.min.js"></script>
+    <script src="./../vendor/js/moment-with-locales.min.js"></script>
+
+    <!-- tempus dominus bs4 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- EXTERNAL STYLES/SCRIPTS end -->
 
     <link rel="icon" href="./../images/icon.png" type="image/png">
 
@@ -114,7 +122,13 @@
                 <div class="form-group row">
                     <label for="dob" class="col-sm-3 col-form-label">Date of Birth <span class="text-danger">*</span></label>
                     <div class="col-sm-9">
-                        <input type="date" id="dob" name="dob" class="form-control" placeholder="DD-MM-YYYY" required>
+                        <div class="input-group date" id="dob_datetimepicker" data-target-input="nearest">
+                            <input type="text" id="dob" name="dob" class="form-control datetimepicker-input"
+                                placeholder="DD-MM-YYYY" required data-target="#dob_datetimepicker">
+                            <div class="input-group-append" data-target="#dob_datetimepicker" data-toggle="datetimepicker">
+                                <span class="input-group-text"><i class="fas fa-calendar-alt fa-fw"></i></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -181,10 +195,20 @@
     </div>
 
     <!-- EXTERNAL SCRIPTS start -->
-    <script src="./../vendor/js/jquery.min.js"></script>
-    <script src="./../vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./../vendor/js/all.min.js"></script>
     <script src="./../vendor/js/parsley.min.js"></script>
     <!-- EXTERNAL SCRIPTS end -->
+
+    <script>
+        const dtFormat = 'DD-MM-YYYY';
+        const mmt = moment().subtract(1, 'year');
+        $(function () {
+            $('#dob_datetimepicker').datetimepicker({
+                viewMode: 'years',
+                format: dtFormat,
+                maxDate: mmt.format('YYYY-MM-DD')
+            });
+        });
+    </script>
 </body>
 </html>
