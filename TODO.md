@@ -7,4 +7,5 @@
     1. ~~Simple tables~~
     2. ~~Data-tables~~
 5. Forms
-    1. Parsley validation
+    1. ~~Parsley validation~~
+    2. Bootstrap Datetime Picker
