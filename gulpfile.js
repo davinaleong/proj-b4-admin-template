@@ -15,7 +15,7 @@ const paths = {
             bs:     './dist/vendor/bootstrap',
             jq:     './dist/vendor/jquery',
             pjs:    './dist/vendor/parsleyjs',
-            dtb:    './dist/vendor/datatables',
+            dtb:    './dist/vendor/dataTables',
             mmt:    './dist/vendor/momentjs',
             prjs:   './dist/vendor/prismjs'
         }
