@@ -30,3 +30,4 @@ gulp
 5. [DataTables](https://datatables.net/) - _sort and search table data_
 6. [MomentJS](https://momentjs.com/) - _Tempus Dominus Bootstrap 4 dependency_
 7. [Tempus Dominus](https://tempusdominus.github.io/bootstrap-4/) - _datetime picker_
+8. [PrismJS](https://prismjs.com/) - _syntax highlighting_

@@ -10,10 +10,14 @@ const paths = {
     dist: {
         dir: './dist',
         vendor: {
-            dir: './dist/vendor',
-            css: './dist/vendor/css',
-            js: './dist/vendor/js',
-            svgs: './dist/vendor/svgs'
+            dir:    './dist/vendor',
+            fa:     './dist/vendor/fontawesome',
+            bs:     './dist/vendor/bootstrap',
+            jq:     './dist/vendor/jquery',
+            pjs:    './dist/vendor/parsleyjs',
+            dtb:    './dist/vendor/datatables',
+            mmt:    './dist/vendor/momentjs',
+            prjs:   './dist/vendor/prismjs'
         }
     }
 };
@@ -31,10 +35,10 @@ gulp.task(tasks.copy, () => {
         // Font Awesome
         gulp.src(`${paths.nodeModules}/@fortawesome/fontawesome-free/js/*.js`)
             .pipe(debug({ title: "--- copied FontAwesome 5 Free scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.fa}/js`)),
         gulp.src(`${paths.nodeModules}/@fortawesome/fontawesome-free/svgs/**/*.svg`)
             .pipe(debug({ title: "--- copied FontAwesome 5 Free SVGs" }))
-            .pipe(gulp.dest(paths.dist.vendor.svgs)),
+            .pipe(gulp.dest(`${paths.dist.vendor.fa}/svgs`)),
 
         //Bootstrap
         gulp.src([
@@ -44,7 +48,7 @@ gulp.task(tasks.copy, () => {
                 `${paths.nodeModules}/bootstrap/dist/css/bootstrap.min.css.map`
             ])
             .pipe(debug({ title: "--- copied Bootstrap 4 styles" }))
-            .pipe(gulp.dest(paths.dist.vendor.css)),
+            .pipe(gulp.dest(`${paths.dist.vendor.bs}/css`)),
         gulp.src([
             `${paths.nodeModules}/bootstrap/dist/js/bootstrap.bundle.js`,
                 `${paths.nodeModules}/bootstrap/dist/js/bootstrap.bundle.js.map`,
@@ -52,41 +56,56 @@ gulp.task(tasks.copy, () => {
                 `${paths.nodeModules}/bootstrap/dist/js/bootstrap.bundle.min.js.map`
             ])
             .pipe(debug({ title: "--- copied Bootstrap 4 bundle scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.bs}/js`)),
 
         //jQuery
         gulp.src(`${paths.nodeModules}/jquery/dist/**.*`)
             .pipe(debug({ title: "--- copied jQuery scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(paths.dist.vendor.jq)),
 
         //Parsley
-        gulp.src(`${paths.nodeModules}/parsleyjs/dist/**.*`)
+        gulp.src([
+                `${paths.nodeModules}/parsleyjs/src/parsley.css`,
+                `${paths.nodeModules}/parsleyjs/dist/**.*`
+            ])
             .pipe(debug({ title: "--- copied ParsleyJS scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.pjs}`)),
 
         //DataTables
         gulp.src(`${paths.nodeModules}/dataTables.net/js/**.*`)
             .pipe(debug({ title: "--- copied DataTables scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.dtb}/js`)),
         gulp.src(`${paths.nodeModules}/dataTables.net-responsive/js/**.*`)
             .pipe(debug({ title: "--- copied DataTables responsive scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.dtb}/js`)),
         gulp.src(`${paths.nodeModules}/dataTables.net-bs4/css/**.*`)
             .pipe(debug({ title: "--- copied DataTables BS4 styles" }))
-            .pipe(gulp.dest(paths.dist.vendor.css)),
+            .pipe(gulp.dest(`${paths.dist.vendor.dtb}/css`)),
         gulp.src(`${paths.nodeModules}/dataTables.net-bs4/js/**.*`)
             .pipe(debug({ title: "--- copied DataTables BS4 scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.dtb}/js`)),
         gulp.src(`${paths.nodeModules}/dataTables.net-responsive-bs4/css/**.*`)
             .pipe(debug({ title: "--- copied DataTables responsive BS4 styles" }))
-            .pipe(gulp.dest(paths.dist.vendor.css)),
+            .pipe(gulp.dest(`${paths.dist.vendor.dtb}/css`)),
         gulp.src(`${paths.nodeModules}/dataTables.net-responsive-bs4/js/**.*`)
             .pipe(debug({ title: "--- copied DataTables responsive BS4 scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js)),
+            .pipe(gulp.dest(`${paths.dist.vendor.dtb}/js`)),
 
+        //Moment
         gulp.src(`${paths.nodeModules}/moment/min/**.*`)
             .pipe(debug({ title: "--- copied Moment scripts" }))
-            .pipe(gulp.dest(paths.dist.vendor.js))
+            .pipe(gulp.dest(`${paths.dist.vendor.mmt}`)),
+
+        //PrismJS
+        gulp.src(`${paths.nodeModules}/prismjs/themes/*.css`)
+            .pipe(debug({ title: "--- copied PrismJS themes" }))
+            .pipe(gulp.dest(`${paths.dist.vendor.prjs}/themes`)),
+        gulp.src(`${paths.nodeModules}/prismjs/plugins/**/*.*`)
+            .pipe(debug({ title: "--- copied PrismJS plugins" }))
+            .pipe(gulp.dest(`${paths.dist.vendor.prjs}/plugins`)),
+        gulp.src(`${paths.nodeModules}/prismjs/prism.js`)
+            .pipe(debug({ title: "--- copied PrismJS main script" }))
+            .pipe(gulp.dest(`${paths.dist.vendor.prjs}`))
     ]);
 });
 
