@@ -97,14 +97,8 @@ gulp.task(tasks.copy, () => {
             .pipe(gulp.dest(`${paths.dist.vendor.mmt}`)),
 
         //PrismJS
-        gulp.src(`${paths.nodeModules}/prismjs/themes/*.css`)
-            .pipe(debug({ title: "--- copied PrismJS themes" }))
-            .pipe(gulp.dest(`${paths.dist.vendor.prjs}/themes`)),
-        gulp.src(`${paths.nodeModules}/prismjs/plugins/**/*.*`)
-            .pipe(debug({ title: "--- copied PrismJS plugins" }))
-            .pipe(gulp.dest(`${paths.dist.vendor.prjs}/plugins`)),
-        gulp.src(`${paths.nodeModules}/prismjs/prism.js`)
-            .pipe(debug({ title: "--- copied PrismJS main script" }))
+        gulp.src(`${paths.nodeModules}/prismjs/**/*.{css,js}`)
+            .pipe(debug({ title: "--- copied PrismJS" }))
             .pipe(gulp.dest(`${paths.dist.vendor.prjs}`))
     ]);
 });

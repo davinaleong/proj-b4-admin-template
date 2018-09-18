@@ -1,11 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
+    <!-- META start -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- META end -->
 
+    <!-- STYLES start -->
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="./vendor/prismjs/plugins/command-line/prism-command-line.css">
+    <!-- STYLES end -->
+
     <link rel="icon" href="./images/icon.png" type="image/png">
 
     <title>Bootstrap 4 Admin Template</title>
@@ -39,11 +45,13 @@
             <p>Simply <kbd>copy &amp; paste</kbd> all files in the <code>/dist</code> folder into your project.</p>
 
             <p>To view the pages as they are, simply run this command in your console/terminal:</p>
-            <p><pre><code class="text-secondary">npm start</code></pre></p>
+
+            <pre class="command-line-prompt"><code class="language-bash">npm start</code></pre>
+            
             <p>And navigate to <code>http://localhost:3000/index.html</code> in your web browser.</p>
 
             <p>To update the vendor packages, run this command in your terminal/console:</p>
-            <p><pre><code class="text-secondary">gulp</code></pre></p>
+            <pre class="command-line-prompt"><code class="language-bash">gulp</code></pre>
             
             <div class="card-group">
                 <div id="card-dependencies" class="card">
@@ -86,8 +94,10 @@
         </div>
     </div>
 
-    <script src="./vendor/bootstrap/js/jquery.min.js"></script>
+    <script src="./vendor/jquery/jquery.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./vendor/fontawesome/js/all.min.js"></script>
+    <script src="./vendor/prismjs/prism.js"></script>
+    <script src="./vendor/prismjs/plugins/command-line/prism-command-line.min.js"></script>
 </body>
 </html>
