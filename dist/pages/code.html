@@ -8,16 +8,17 @@
 
     <!-- EXTERNAL STYLES start -->
     <link rel="stylesheet" href="./../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="icon" href="./../images/icon.png" type="image/png">
+    <link rel="stylesheet" href="./../vendor/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="./../vendor/prismjs/plugins/line-numbers/prism-line-numbers.css">
     <!-- EXTERNAL STYLES end -->
+
+    <link rel="icon" href="./../images/icon.png" type="image/png">
 
     <title>Bootstrap 4 Admin Template</title>
     <style>
-        html, body {
-            min-height: 100vh;
-        }
-        #sidebar {
-            min-height: 100vh;
+        pre[class*="language-"] {
+            height: 500px;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -52,13 +53,16 @@
                     <a class="nav-link" href="./../index.html"><i class="fas fa-home fa-fw"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="./static-content.html"><i class="fas fa-file fa-fw"></i> Static Content</a>
+                    <a class="nav-link" href="./welcome.html"><i class="fas fa-file fa-fw"></i> Static Content</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./tables.html"><i class="fas fa-table fa-fw"></i> Tables</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./forms.html"><i class="fas fa-file-alt fa-fw"></i> Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./code.html"><i class="fas fa-code fa-fw"></i> Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./logs.html"><i class="fas fa-list fa-fw"></i> Logs</a>
@@ -69,14 +73,74 @@
             </ul>
         </div>
         <div id="main" class="col-9">
-            <h1 class="display-4">Welcome, <span class="text-info">Your Name</span></h1>
+            <h1 class="display-4">Code</span></h1>
             <hr class="mb-3">
             
-            <p>You may:</p>
-            <ul>
-                <li><a href="./my-profile.html">View your profile</a></li>
-                <li><a href="./change-password.html">Change your password</a></li>
-            </ul>
+            <h2>Out of the box <small>sample: <code>parsley-b4.css</code></small></h2>
+            <pre><code class="language-css">input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+    border-color: #28a745;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+    border-color: #dc3545;
+}
+
+.parsley-errors-list {
+    margin: 2px 0 3px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    opacity: 0;
+    color: #dc3545;
+
+    transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+    opacity: 1;
+}
+                </code></pre>
+
+            <h2 class="mt-5">With line numbers <small>sample: <code>parsley-b4.css</code></small></h2>
+            <pre class="line-numbers"><code class="language-css">input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+    border-color: #28a745;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+    border-color: #dc3545;
+}
+
+.parsley-errors-list {
+    margin: 2px 0 3px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    opacity: 0;
+    color: #dc3545;
+
+    transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+    opacity: 1;
+}
+                </code></pre>
 
             <footer class="mt-5 mb-3">
                 <hr>
@@ -88,5 +152,7 @@
     <script src="./../vendor/jquery/jquery.min.js"></script>
     <script src="./../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./../vendor/fontawesome/js/all.min.js"></script>
+    <script src="./../vendor/prismjs/prism.js"></script>
+    <script src="./../vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 </body>
 </html>
