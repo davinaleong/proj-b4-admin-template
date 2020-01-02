@@ -1,5 +1,5 @@
 # Bootstrap 4 Admin Template
-View demo [here](https://davinaleong.github.io/proj-b4-admintemplate/).
+View demo [here](https://davinaleong.github.io/proj-b4-admin-template/).
 
 A simple Bootstrap 4 admin template that's ready to use right out of the box!. I made this template because I often find myself in need of a simple, pure Bootstrap 4 template. Many of the Admin Dashboard templates I've come across online are over-engineered and overly complex.
 
